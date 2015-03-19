@@ -55,10 +55,6 @@ public class NumberTranslator {
     return words;
   }
 
-  private static String translateIllions(int bigIdx){
-    return XLARGE[bigIdx % 10];
-  }
-
   // Range 1-999
   private static String translateHundreds(int number){
     return (number > 99 ? translateHundreds(number/100) + " hundred " : "") + translateTens(number % 100);
